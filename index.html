@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Form</title>
+   
+    
+      
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
+	                <script type="text/javascript" src="js/main.js"></script>
+
+    
+</head> 
+
+<body>
+  
+<div style="text-align:center"><h3 id="accessibilityEnabled">Accessibilty enabled</h3>  
+<label class="switch">
+  <input type="checkbox" id="accessibilityEnabledToggle" checked>
+  <span class="slider round"></span>
+</label>       
+                        
+   <h2>User Form</h2>
+
+<form action="/action_page.php">
+ <b> <label for="fname" id="fname" onmouseover="textToAudio()">First name:</label></b><br>
+  <input type="text" id="fname" onmouseover="textToAudio() maxlength="50" required><br><br><br>
+  
+  <b><label for="fname">Last name:</label></b><br>
+  <input type="text" id="lname" maxlength="50" required><br><br><br>
+  
+  <b><label for="fname">Email:</label></b><br>
+  <input type="text" id="email" maxlength="64" required><br><br><br>
+  
+  <b><label for="fname">Gender:</label></b><br>
+  <input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br><br>
+  
+  <input type="submit" value="Submit">
+</form> 
+</div>  
+</body>
+</html> 
+

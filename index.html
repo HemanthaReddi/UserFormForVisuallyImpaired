@@ -13,33 +13,64 @@
 
 <body>
   
-<div style="text-align:center"><h3 id="accessibilityEnabled">Accessibilty enabled</h3>  
+<div class="section"><h3 id="accessibilityEnabled">Accessibilty enabled</h3>  
 <label class="switch">
   <input type="checkbox" id="accessibilityEnabledToggle" checked>
   <span class="slider round"></span>
 </label>       
                         
    <h2>User Form</h2>
+   <p>Please enter your details</p><br>
 
 <form action="/action_page.php">
- <b> <label for="fname" id="fname" onmouseover="textToAudio()">First name:</label></b><br>
-  <input type="text" id="fname" onmouseover="textToAudio() maxlength="50" required><br><br><br>
+
+ <b> <label  for="fname" id="fname" onmouseover="textToAudio()">First name:</label></b><br>
+  <input type="text" class="fname"  onmouseover="textToAudio() maxlength="50" required><br><br><br>
   
-  <b><label for="fname">Last name:</label></b><br>
-  <input type="text" id="lname" maxlength="50" required><br><br><br>
+  <b><label for="lname" id="lname">Last name:</label></b><br>
+  <input type="text"  maxlength="50" required><br><br><br>
   
-  <b><label for="fname">Email:</label></b><br>
-  <input type="text" id="email" maxlength="64" required><br><br><br>
+  <b><label for="email" id="email">Email:</label></b><br>
+  <input id="submit" type="text"  maxlength="64" required><br><br><br>
   
-  <b><label for="fname">Gender:</label></b><br>
-  <input type="radio" id="male" name="gender" value="male" required>
+  <b><label id="date_of_birth">Date of Birth:</b><br>
+   <select class="first" name="date_of_birth:day" tabindex="7" id="day">
+          <option value="">day</option>
+          <option value="1">1</option>
+            
+          <option value="31">31</option>
+    </select>     
+
+    <select name="date_of_birth:mon" tabindex="8" id="month" onchange="onchangemonth(this.value)">
+          <option value="">month</option>
+          <option value="1">Jan</option>
+               
+          <option value="12">Dec</option>
+    </select>
+
+
+     <select name="date_of_birth:year" tabindex="9" id="year" onchange="onchangeyear(this.value)">
+          <option value=""> Year</option>
+          <option value="1920">1920</option>         
+                    
+           <option value="2010">2010</option>       
+           <option value="2011">2011</option> 
+           <option value="2012">2012</option>      
+
+     </select>
+
+ </label><br><br><br>
+
+  <b><label id="gender">Gender:</label></b><br>
+  <input type="radio" id="male" class="gender" name="gender" value="male" required>
   <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
+  <input type="radio" id="female" class="gender" name="gender" value="female">
   <label for="female">Female</label><br>
-  <input type="radio" id="other" name="gender" value="other">
+  <input type="radio" id="other" class="gender" name="gender" value="other">
   <label for="other">Other</label><br><br><br>
-  
-  <input type="submit" value="Submit">
+
+<input type="button" class="button" value="Submit">
+ 
 </form> 
 </div>  
 </body>

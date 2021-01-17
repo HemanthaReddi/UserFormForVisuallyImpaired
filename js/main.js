@@ -24,6 +24,8 @@ function textToAudio() {
                 speech.rate = 1;
                 speech.pitch = 1;
                 
+				window.speechSynthesis.cancel();
                 window.speechSynthesis.speak(speech);
 				
 }
+

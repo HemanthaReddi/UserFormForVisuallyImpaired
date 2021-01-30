@@ -13,37 +13,44 @@
 
 <body>
   
-<div class="section"><h3 id="accessibilityEnabled">Accessibilty enabled</h3>  
+<div class="section">
+<header>
+<h3 id="accessibilityEnabled">Accessibilty enabled</h3>  
 <label class="switch">
-  <input type="checkbox" id="accessibilityEnabledToggle" checked>
+  <input class="switch" type="checkbox" id="accessibilityEnabledToggle" checked>
   <span class="slider round"></span>
-</label>       
+</label>   
+</header>    
                         
    <h1>User Form</h1>
    <p>Please enter your details</p><br>
 
 <form action="/action_page.php">
 
- <b> <label  for="firstname" id="fname" onmouseover="textToAudio()">First name:</label></b><br>
-  <input type="text" id="firstname"  onmouseover="textToAudio() maxlength="50" required><br><br><br>
+ <b> <label  for="firstname" id="fname" onmouseenter="textToAudio()">First name:</label></b><br>
+  <input type="text" id="firstname"  onmouseenter="textToAudio() maxlength="50" required><br><br><br>
   
   <b><label for="lastname" id="lname">Last name:</label></b><br>
   <input type="text" id="lastname" maxlength="50" required><br><br><br>
   
   <b><label for="emailid" id="email">Email:</label></b><br>
-  <input id="emailid" type="text"  maxlength="64" required><br><br><br>
+  <input id="emailid" type="text" size="30" maxlength="64" required><br><br><br>
   
+  <b><label for="dob" id="dateofbirth">Date of Birth:</label></b><br>
+  <input type="text" id="dob" maxlength="2" size="2" placeholder="dd" required>/
+  <input type="text" id="dob" maxlength="2" size="2" placeholder="mm" required>/
+  <input type="text" id="dob" maxlength="4" size="4" placeholder="yyyy" required><br><br><br>
   <b>
-  <fieldset>
-  <legend><label for for="dob" id="date_of_birth">Date of Birth:</b><br></legend>
-   <select class="first" id="dob" name="date_of_birth:day" tabindex="7" id="day">
+  <!--<fieldset>
+  <legend><label for="dob" id="date_of_birth">Date of Birth:</b><br></legend>
+   <select class="first" id="dob" name="date_of_birth:day"  id="day">
           <option value="">day</option>
           <option value="1">1</option>
             
           <option value="31">31</option>
     </select>     
 
-    <select name="date_of_birth:mon" tabindex="8" id="dob" onchange="onchangemonth(this.value)">
+    <select name="date_of_birth:mon"  id="dob" onchange="onchangemonth(this.value)">
           <option value="">month</option>
           <option value="1">Jan</option>
                
@@ -51,7 +58,7 @@
     </select>
 
 
-     <select name="date_of_birth:year"  tabindex="9" id="dob" onchange="onchangeyear(this.value)">
+     <select name="date_of_birth:year"  id="dob" onchange="onchangeyear(this.value)">
           <option value=""> Year</option>
           <option value="1920">1920</option>         
                     
@@ -60,16 +67,18 @@
            <option value="2012">2012</option>      
 
      </select>
-	</fieldset>
- </label><br><br><br>
+	</fieldset>-->
+ </label><br>
 
-  <b><label id="gender">Gender:</label></b><br>
+<fieldset>
+  <legend><b><label id="gender">Gender:</label></b><br></legend>
   <input type="radio" id="male" class="gender" name="gender" value="male" required>
   <label for="male">Male</label><br>
   <input type="radio" id="female" class="gender" name="gender" value="female">
   <label for="female">Female</label><br>
   <input type="radio" id="other" class="gender" name="gender" value="other">
   <label for="other">Other</label><br><br><br>
+</fieldset>
 
 <input type="button" class="button" value="Submit">
  
